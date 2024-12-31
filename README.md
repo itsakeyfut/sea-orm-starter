@@ -7,7 +7,7 @@
 ## SeaORM とは
 
 <p>Rust で ORM を使用してマイグレーション・テーブルアクセスができる CLI およびクレート</p>
-<p>[SeaORM](https://www.sea-ql.org/SeaORM/)</p>
+<a href="https://www.sea-ql.org/SeaORM/">SeaORM Official</a>
 
 ## 主なコマンド
 
