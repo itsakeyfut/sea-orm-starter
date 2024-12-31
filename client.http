@@ -1,0 +1,12 @@
+### ユーザー取得
+GET http://localhost:8000/users/1
+
+### ユーザー登録
+
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "username": "test_user1",
+    "cognito_id": "1"
+}
