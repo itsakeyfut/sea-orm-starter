@@ -15,6 +15,8 @@
 <p>⭐のないコマンドは紹介に留めておきたいものです。</p>
 <p>初期化とマイグレーションファイルの作成のみはホストマシンで行うようにした。</p>
 
+***
+
 ### ⭐ マイグレーションの初期化
 
 ```bash
@@ -23,6 +25,8 @@ sea-orm-cli migrate init
 
 <p>Makefile でコマンドを短縮した</p>
 make migrate-init
+
+***
 
 ### ⭐⭐ マイグレーションファイルの作成
 
@@ -49,6 +53,8 @@ Creating migration file `./migration\src\m20241231_220934_create_project_table.r
 Adding migration `m20241231_220934_create_project_table` to `./migration\src\lib.rs`
 ```
 
+***
+
 ### ⭐⭐⭐ マイグレーション実行
 
 ```bash
@@ -58,6 +64,8 @@ docker exec -it backend sea-orm-cli migrate up -u postgres://postgres:postgres@d
 <p>Makefile でコマンドを短縮した</p>
 make migrate-up
 
+***
+
 ### マイグレーションロールバック
 
 ```bash
@@ -66,6 +74,8 @@ docker exec -it backend sea-orm-cli migrate down -u postgres://postgres:postgres
 
 <p>Makefile でコマンドを短縮した</p>
 make migrate-down
+
+***
 
 ### ⭐⭐⭐⭐ エンティティ生成
 
