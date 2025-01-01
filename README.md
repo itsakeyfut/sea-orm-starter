@@ -9,6 +9,14 @@
 <p>Rust で ORM を使用してマイグレーション・テーブルアクセスができる CLI およびクレート</p>
 <a href="https://www.sea-ql.org/SeaORM/">SeaORM Official</a>
 
+## SeaORM CLI とは
+マイグレーションファイルの作成・実行・ロールバック・エンティティ生成などがコマンドで実行できる
+
+### インストール
+```bash
+cargo install sea-orm-cli
+```
+
 ## 主なコマンド
 
 <p>手順として、⭐の数を見て環境構築してもらえると問題ないです。</p>
