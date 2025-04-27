@@ -1,97 +1,92 @@
-# SeaORM スターターキット
+# SeaORM Starter Kit
 
-<p>SeaORM に関する情報が少ないため、SeaORM のテンプレを用意した。</p>
-<p>なるべくミニマムに設計し、拡張できるように工夫してある。</p>
-<p>問題点があれば、Issues を挙げてもらえると幸甚です。</p>
+Due to the limited information available on SeaORM, I have created this template to provide a minimal yet extendable setup for working with SeaORM.  
+If you encounter any issues, please feel free to raise them in the Issues section.
 
-## SeaORM とは
+## What is SeaORM?
 
-<p>Rust で ORM を使用してマイグレーション・テーブルアクセスができる CLI およびクレート</p>
-<a href="https://www.sea-ql.org/SeaORM/">SeaORM Official</a>
+SeaORM is an ORM (Object-Relational Mapper) in Rust that allows migration and table access through a CLI tool and crate.  
+[SeaORM Official](https://www.sea-ql.org/SeaORM/)
 
-## SeaORM CLI とは
-マイグレーションファイルの作成・実行・ロールバック・エンティティ生成などがコマンドで実行できる
+## What is SeaORM CLI?
 
-### インストール
-```bash
+The SeaORM CLI enables operations like generating migration files, running migrations, rolling them back, and creating entities—all through simple commands.
+
+### Installation
+
+```sh
 cargo install sea-orm-cli
 ```
 
-## 主なコマンド
+## Key Commands
+To get started, follow the instructions below based on the ⭐ indicators. Commands without a star are for reference purposes only.
+Initialization and migration file creation must be done on the host machine.
 
-<p>手順として、⭐の数を見て環境構築してもらえると問題ないです。</p>
-<p>⭐のないコマンドは紹介に留めておきたいものです。</p>
-<p>初期化とマイグレーションファイルの作成のみはホストマシンで行うようにした。</p>
-
-***
-
-### ⭐ マイグレーションの初期化
-
-```bash
+### ⭐ Initialize Migration
+```sh
 sea-orm-cli migrate init
 ```
 
-<p>Makefile でコマンドを短縮した</p>
+This command is shortened using Makeifle.
+```sh
 make migrate-init
+```
 
-***
+### ⭐⭐ Create Migration File
 
-### ⭐⭐ マイグレーションファイルの作成
-
-```bash
+```sh
 sea-orm-cli migrate generate create_<table_name>_table
 ```
 
-例. user テーブルを作成
-
-```bash
+Example: Create the "user" table.
+```sh
 sea-orm-cli migrate generate create_user_table
 ```
 
-<p>Makefile でコマンドを短縮した</p>
+This command is also shortened using Makefile.
+```sh
 make gen table_name=user_table_name
+```
 
-e.g.
-
-```bash
+Example:
+```sh
 $ make gen table_name=project
 sea-orm-cli migrate generate create_project_table
 Generating new migration...
-Creating migration file `./migration\src\m20241231_220934_create_project_table.rs`
-Adding migration `m20241231_220934_create_project_table` to `./migration\src\lib.rs`
+Creating migration file `./migration/src/m20241231_220934_create_project_table.rs`
+Adding migration `m20241231_220934_create_project_table` to `./migration/src/lib.rs`
 ```
 
-***
-
-### ⭐⭐⭐ マイグレーション実行
-
-```bash
+### ⭐⭐⭐ Run Migration
+```sh
 docker exec -it backend sea-orm-cli migrate up -u postgres://postgres:postgres@db/sea-orm-starter
 ```
 
-<p>Makefile でコマンドを短縮した</p>
+This command is shortened using Makefile.
+
+```sh
 make migrate-up
+```
 
-***
-
-### マイグレーションロールバック
-
-```bash
+### Rollback Migration
+```sh
 docker exec -it backend sea-orm-cli migrate down -u postgres://postgres:postgres@db/sea-orm-starter
 ```
 
-<p>Makefile でコマンドを短縮した</p>
+This command is shortened using Makefile.
+
+```sh
 make migrate-down
+```
 
-***
+### ⭐⭐⭐⭐ Generate Entity
+This command is executed within the container and generates entities for the project on the host machine.
 
-### ⭐⭐⭐⭐ エンティティ生成
-
-<p>コンテナ内で実行し、ホストマシンのプロジェクトにエンティティを生成するようにした。</p>
-
-```bash
+```sh
 sea-orm-cli generate entity -u postgres://postgres:postgres@localhost:5432/sea-orm-starter -o src/entities
 ```
 
-<p>Makefile でコマンドを短縮した</p>
+This command is also shortened using Makeifle.
+```sh
 make gen-entity
+```
