@@ -10,7 +10,7 @@ body:
     attributes:
       label: 実行環境
       description: OS、ブラウザ、使用しているバージョンなどを記入してください。
-      placeholder: 例: Windows 10 / Chrome 114 / アプリ v1.2.3
+      placeholder: 例： Windows 10 / Chrome 114 / アプリ v1.2.3
     validations:
       required: true
 
@@ -19,7 +19,7 @@ body:
     attributes:
       label: バグの概要
       description: 発生したバグについて、簡潔に説明してください。
-      placeholder: 例: ログインボタンをクリックしても何も起こらない。
+      placeholder: 例： ログインボタンをクリックしても何も起こらない。
     validations:
       required: true
 
