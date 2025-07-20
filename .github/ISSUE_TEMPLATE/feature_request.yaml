@@ -38,7 +38,7 @@ body:
     id: additional
     attributes:
       label: その他
-      description: その他伝えたいことがあれば記載してください。
-      placeholder: 例: この機能は他のツールにもあり便利でした
+      description: その他に伝えたいことがあれば記載してください（任意）。
+      placeholder: 例: この機能は他のツールにもあり便利でした。
     validations:
       required: false
