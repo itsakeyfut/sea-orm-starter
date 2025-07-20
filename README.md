@@ -33,13 +33,19 @@ cargo install sea-orm-cli
 cargo install sea-orm-cli
 ```
 
-2. コンテナを作成
+2. .envを作成
+
+```sh
+cp .env.example .env
+```
+
+3. コンテナを作成
 
 ```sh
 make start
 ```
 
-3. マイグレーション
+4. マイグレーション
 
 ※もし失敗する場合は、sea-orm と sqlx のバージョン不一致で失敗している可能性が高いです。SeaORM の常習的なエラーなので、sea-orm のバージョンアップをお願いします。
 
@@ -47,7 +53,7 @@ make start
 make migrate-up
 ```
 
-4. HTTP テスト
+5. HTTP テスト
 
 client.http にエンドポイントを 2 つ用意していますので、「Send Request」してテストしてみてください。
 
