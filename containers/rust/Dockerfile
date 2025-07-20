@@ -1,5 +1,5 @@
 # ==================== Builderステージ ====================
-FROM rust:1.83-slim AS builder
+FROM rust:1.88-slim AS builder
 
 # 必要なビルドツールとライブラリをインストール
 RUN apt-get update \
