@@ -98,7 +98,7 @@ async fn main() -> Result<(), DbErr> {
     // ルーターの設定
     let app = Router::new()
         .route("/users", post(create_user))
-        .route("/users/:id", get(get_user))
+        .route("/users/{id}", get(get_user))
         .with_state(state);
 
     // サーバーのリスナーを作成
