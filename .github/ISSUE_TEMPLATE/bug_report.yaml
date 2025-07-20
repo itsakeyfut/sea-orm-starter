@@ -5,11 +5,6 @@ labels: ["bug"]
 assignees: []
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ご協力ありがとうございます！以下の情報をできるだけ詳しくご記入ください。
-
   - type: input
     id: environment
     attributes:

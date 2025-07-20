@@ -5,11 +5,6 @@ labels: ["enhancement"]
 assignees: []
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ご提案ありがとうございます！以下の内容をご記入ください。
-
   - type: input
     id: summary
     attributes:
