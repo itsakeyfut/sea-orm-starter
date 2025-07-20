@@ -1,0 +1,49 @@
+name: 機能要望
+description: 新機能や改善の提案をしたいときはこちら
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご提案ありがとうございます！以下の内容をご記入ください。
+
+  - type: input
+    id: summary
+    attributes:
+      label: 機能の概要
+      description: 提案する機能の概要を簡潔に記入してください。
+      placeholder: 例: ダークモードの追加
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 詳細
+      description: 実装方法のアイデアや具体的なユースケースなどがあれば記載してください。
+      placeholder: |
+        ダークモードを設定画面から切り替え可能にしたいです。
+        視認性が高まり、夜間の作業がしやすくなります。
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案
+      description: 他に検討した方法や妥協案があれば記載してください（任意）。
+      placeholder: 現状のままでもブラウザ拡張で対応可能だが、公式サポートが望ましい。
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: その他
+      description: その他伝えたいことがあれば記載してください。
+      placeholder: 例: この機能は他のツールにもあり便利でした
+    validations:
+      required: false
